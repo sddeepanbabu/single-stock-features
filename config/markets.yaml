@@ -1,0 +1,3 @@
+markets:
+  NSE: {suffix: ".NS", currency: INR, timezone: Asia/Kolkata}
+  US:  {suffix: "",    currency: USD, timezone: America/New_York}

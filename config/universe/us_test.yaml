@@ -1,0 +1,5 @@
+name: us_test
+market: US
+stocks:
+  - {symbol: AAPL}
+  - {symbol: MSFT}

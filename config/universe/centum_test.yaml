@@ -1,0 +1,6 @@
+name: centum_test
+market: NSE
+stocks:
+  - symbol: CENTUM
+    name: Centum Electronics Ltd
+    tags: {sector: Electronics}

@@ -1,0 +1,9 @@
+default_source: yfinance
+sources:
+  yfinance:
+    adapter: yfinance
+    period: 5y
+    interval: 1d
+    auto_adjust: false
+    retries: 3
+    backoff_seconds: 2

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stock-behaviour-analyzer"
+version = "0.1.0"
+description = "Config-driven stock price-behaviour analysis (NSE, US) with agent-readable logs"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.0", "numpy>=1.24", "pyarrow>=14",
+  "pyyaml>=6", "pydantic>=2.5", "yfinance>=0.2.40",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-cov>=5"]
+
+[project.scripts]
+sba = "sba.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--cov=sba --cov-report=term-missing --cov-fail-under=95"
+
+[tool.coverage.run]
+omit = ["*/__main__.py"]

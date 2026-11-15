@@ -1,0 +1,14 @@
+profile: local
+sources_file: config/sources.yaml
+markets_file: config/markets.yaml
+screen_file: config/screen.yaml
+universe_dir: config/universe
+export_dir: data/exports
+storage:
+  primary: sqlite
+  secondary: [parquet]
+  sqlite_path: data/sba.db
+  parquet_dir: data/parquet
+log:
+  level: INFO
+  file: logs/sba.log
